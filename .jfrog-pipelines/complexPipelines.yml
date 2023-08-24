@@ -303,10 +303,6 @@ resources:
             
 pipelines:
   - name: complexPipeline1
-    postRun:
-      execution:
-        onExecute:
-          - echo "Executing Post Run"
     configuration:
       environmentVariables:
         readOnly:
