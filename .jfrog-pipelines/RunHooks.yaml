@@ -1,0 +1,13 @@
+pipelines: 
+  - name: PreAndPostRuns 
+    preRun: 
+      execution: 
+        onExecute: 
+          - printenv 
+          - echo "Executing Pre Run"
+    postRun: 
+      execution: 
+        onExecute: 
+          - printenv 
+          - echo "Executing Post Run"
+
