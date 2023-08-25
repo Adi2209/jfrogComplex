@@ -302,7 +302,7 @@ resources:
       key2: value2
             
 pipelines:
-  - name: complexPipeline1
+  - name: RunHookPipeline1
     preRun: 
         execution: 
           onExecute: 
