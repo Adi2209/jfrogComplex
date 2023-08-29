@@ -13,7 +13,7 @@ resources:
       key2: value2
             
 pipelines:
-  - name: RunHookPipeline1
+  - name: RunHookSimplePipeline1
     preRun: 
         execution: 
           onExecute: 
