@@ -1,6 +1,5 @@
 
 resources:
-
   - name: res_quia_1jt
     type: PropertyBag
     configuration:
@@ -63,21 +62,9 @@ pipelines:
             - 'echo "Executing step on ${stepvar_id}"'
             - export date=$(date)
             - write_output res_praesentium_2t "date1=$date"
-            - printenv
-            - printenv
-            - printenv
-            - printenv
-            - printenv
-            - printenv
-            - printenv
         configuration:
           inputResources:
             - name: res_quia_1jt
             - name: res_praesentium_2jt
-        execution:
-          onExecute:
-            - 'echo "Executing step on ${stepvar_id}"'
-            - export date=$(date)
-            - printenv
 
 
