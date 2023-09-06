@@ -49,7 +49,7 @@ pipelines:
             - 'echo "Executing step on ${stepvar_id}"'
             - export date=$(date)
         configuration:
-          inputStep: 
+          inputSteps: 
             - name: step_updatet1
           inputResources:
             - name: res_quia_1jt
@@ -57,7 +57,7 @@ pipelines:
       - name: step_updatet2
         type: Bash
         configuration:
-          inputStep: 
+          inputSteps: 
             - name: step_sint_3t2
           inputResources:
             - name: res_quia_1jt
@@ -75,7 +75,7 @@ pipelines:
             - 'echo "Executing step on ${stepvar_id}"'
             - export date=$(date)
         configuration:
-          inputStep: 
+          inputSteps: 
             - name: step_updatet2
           inputResources:
             - name: res_quia_1jt
