@@ -1,0 +1,83 @@
+
+resources:
+  - name: res_quia_1jt_1
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_praesentium_2jt_1
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+            
+pipelines:
+  - name: RunHookSimplePipeline1Test
+    preRun: 
+        execution: 
+          onExecute: 
+            - printenv 
+            - echo "Executing Pre Run"
+    postRun: 
+      execution: 
+        onExecute: 
+          - printenv 
+          - echo "Executing Post Run"
+    configuration:
+      environmentVariables:
+        readOnly:
+          TEST_ENV: "pipelines"
+          JUST_FES: "options"
+          LOL_FOO: "test"
+    steps:
+      - name: step_updatet1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: res_quia_1jt_1
+            - name: res_praesentium_2jt_1
+        execution:
+          onExecute:
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+      - name: step_sint_3t2
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+        configuration:
+          inputStep: 
+            - name: step_updatet1
+          inputResources:
+            - name: res_quia_1jt
+            - name: res_praesentium_2jt
+      - name: step_updatet2
+        type: Bash
+        configuration:
+          inputStep: 
+            - name: step_sint_3t2
+          inputResources:
+            - name: res_quia_1jt
+            - name: res_praesentium_2jt
+        execution:
+          onExecute:
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+      - name: step_sint_3t3
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+        configuration:
+          inputStep: 
+            - name: step_updatet2
+          inputResources:
+            - name: res_quia_1jt
+            - name: res_praesentium_2jt
+
