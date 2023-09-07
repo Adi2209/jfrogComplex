@@ -61,7 +61,6 @@ pipelines:
             - printenv
             - 'echo "Executing step on ${stepvar_id}"'
             - export date=$(date)
-            - write_output res_praesentium_2t "date1=$date"
         configuration:
           inputResources:
             - name: res_quia_1jt
