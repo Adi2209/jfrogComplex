@@ -12,7 +12,7 @@ resources:
       key2: value2
             
 pipelines:
-  - name: RunHookSimplePipeline1
+  - name: RunHookSimplePipeline1Deepak
     preRun: 
         execution: 
           onExecute: 
