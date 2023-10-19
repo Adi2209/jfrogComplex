@@ -1,6 +1,6 @@
 name: shashankt_2
 steps:
-  - name: first
+  - name: first_step_test
     type: Bash
     execution:
       onStart:
