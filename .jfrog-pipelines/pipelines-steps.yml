@@ -1,0 +1,29 @@
+valuesFilePath: ./values.yml
+pipelines:
+- name: test_pipeline
+  configuration:
+    jfrogCliVersion: 2
+  steps:
+    - name: test_step1
+      type: Bash
+      configuration:
+          affinityGroup: together
+      execution:
+        onStart:
+          - echo {{ .Values.isTestPipeline }}
+    - name: test_step2
+      type: Bash
+      configuration:
+          affinityGroup: together
+      execution:
+        onStart:
+          - echo {{ .Values.isTestPipeline }}
+    - name: test_step3
+      type: Bash
+      configuration:
+          affinityGroup: together
+      execution:
+        onStart:
+          - echo {{ .Values.isTestPipeline }}
+    
+        
