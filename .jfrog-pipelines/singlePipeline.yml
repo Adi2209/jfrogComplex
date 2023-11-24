@@ -47,7 +47,7 @@ pipelines:
           onExecute:
             - echo 'success'
             - echo $var1
-      - name: step5
+      - name: step6
         type: Bash
         configuration:
           condition: 'var1 == 2'
