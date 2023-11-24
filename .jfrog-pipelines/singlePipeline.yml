@@ -22,7 +22,7 @@ pipelines:
         configuration:
           condition: 'var1 == 2'
           inputSteps:
-            - name: step3
+            - name: step2
         execution:
           onExecute:
             - echo 'success'
@@ -42,7 +42,7 @@ pipelines:
         configuration:
           condition: 'var1 == 2'
           inputSteps:
-            - name: step4
+            - name: step3
         execution:
           onExecute:
             - echo 'success'
@@ -52,7 +52,7 @@ pipelines:
         configuration:
           condition: 'var1 == 2'
           inputSteps:
-            - name: step4
+            - name: step3
         execution:
           onExecute:
             - echo 'success'
