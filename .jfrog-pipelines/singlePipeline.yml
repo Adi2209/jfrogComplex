@@ -17,3 +17,43 @@ pipelines:
           onExecute:
             - echo 'success'
             - echo $var1
+        - name: step3
+        type: Bash
+        configuration:
+          condition: 'var1 == 2'
+          inputSteps:
+            - name: step3
+        execution:
+          onExecute:
+            - echo 'success'
+            - echo $var1
+        - name: step4
+        type: Bash
+        configuration:
+          condition: 'var1 == 2'
+          inputSteps:
+            - name: step3
+        execution:
+          onExecute:
+            - echo 'success'
+            - echo $var1
+        - name: step5
+        type: Bash
+        configuration:
+          condition: 'var1 == 2'
+          inputSteps:
+            - name: step4
+        execution:
+          onExecute:
+            - echo 'success'
+            - echo $var1
+        - name: step5
+        type: Bash
+        configuration:
+          condition: 'var1 == 2'
+          inputSteps:
+            - name: step4
+        execution:
+          onExecute:
+            - echo 'success'
+            - echo $var1
