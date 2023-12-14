@@ -1,0 +1,10 @@
+pipelines:
+  - name: MyApprovalGatesPipeline
+    steps:
+      - name: approvalGatesStep
+        type: Bash
+        configuration:
+          requiresApproval: true
+        execution:
+          onExecute:
+            - echo "executing step..."
