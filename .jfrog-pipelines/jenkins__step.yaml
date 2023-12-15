@@ -6,5 +6,5 @@ pipelines:
         configuration: 
           jenkinsJobName: pipe_test
           integrations:
-            - name: S_B_Jenkins
+            - name: jen_int
           
